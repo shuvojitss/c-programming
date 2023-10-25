@@ -41,7 +41,7 @@ struct node *OCDelete(struct node *root,struct node *par,struct node *ptr){
 		child=ptr->right;
 	if(par==NULL)
 		root=child;
-	else if(par=ptr->left)
+	else if(par==ptr->left)
 		par->left=child;
 	else
 		par->right=child;
@@ -116,12 +116,12 @@ int main(){
             	root = delete_node(root,item);
             	break;
             case 3:
-				printf("Inorder traversal is given by:");
-				inorder(root);
-				break;
-			default:
-				printf("Invalid input");
-				break;
+		printf("Inorder traversal is given by:");
+		inorder(root);
+		break;
+	    default:
+		printf("Invalid input");
+		break;
 		}
      }while(option!=4);
      return 0;
